@@ -18,6 +18,7 @@ const listofitemRoutes = require('./routes/listofitemRoutes');
 const ordersRoutes = require('./routes/ordersRoutes');
 const studentRoutes = require('./routes/studentRoutes');
 const studentreportRoutes = require('./routes/studentreportRoutes');
+const sayRoutes = require('./routes/sayRoutes');
 
 const app = express();
 const port = 3000;
@@ -43,7 +44,8 @@ const options = {
         './routes/listofitemRoutes.js',
         './routes/ordersRoutes.js',
         './routes/studentRoutes.js',
-        './routes/studentreportRoutes.js'
+        './routes/studentreportRoutes.js',
+        './routes/sayRoutes.js'
     ]
 };
 
@@ -66,6 +68,7 @@ app.use('/listofitem', listofitemRoutes);
 app.use('/orders', ordersRoutes);
 app.use('/student', studentRoutes)
 app.use('/studentreport', studentreportRoutes);
+app.use('/say', sayRoutes);
 
 
 app.listen(port, () => {
